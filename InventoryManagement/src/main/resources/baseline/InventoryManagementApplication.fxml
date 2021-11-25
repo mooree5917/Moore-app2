@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wgu.view.FXMLDocumentController">
+<ScrollPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.DocumentController">
     <content>
         <AnchorPane id="AnchorPane" fx:id="MainScreen" prefHeight="615.0" prefWidth="774.0">
             <children>

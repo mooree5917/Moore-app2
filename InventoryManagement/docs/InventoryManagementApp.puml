@@ -1,0 +1,79 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+AddItem.fxml <|--InventoryManagementApp
+InventoryManagementApp --|> ModifyItem.fxml
+InventoryManager.fxml  <|-- AddItem.fxml
+InventoryManagementApp  <|-- InventoryManager.fxml
+
+DocumentController --|> InventoryManagementApp
+ModifyItem.fxml <|--|> InventoryManager.fxml
+
+InventoryManagementApp --|> ModifyManager.fxml
+ModifyManager.fxml --|> InventoryManager.fxml
+
+Item --|> AddItem.fxml
+Inventory --|> InventoryManager.fxml
+
+
+class AddItem.fxml {
+    - Add;
+    - Save;
+    - Cancel;
+
+}
+
+class InventoryManager.fxml {
+   - Save Manager;
+   - Serial Number;
+   - Name of Item;
+   - Price;
+   - delete;
+   - search;
+}
+
+
+class ModifyItem.fxml {
+    - Serial Number;
+    - Price;
+    - Save;
+    - Cancel;
+}
+
+class ModifyManager.fxml {
+    - Add;
+    - Delete;
+    - search;
+    - cancel;
+}
+
+interface InventoryManagementApp {
+    - Column of Serial numbers;
+    - Column of Name;
+    - Column of price;
+    - Add;
+    - Save;
+    - Search;
+    - Load;
+    - Cancel;
+}
+
+class DocumentController{
+    AddItem screen;
+    ModifyItem screen;
+}
+
+class Item{
+    - Serial Number;
+    - name;
+    - Price;
+}
+
+class Inventory{
+    -Serial Number;
+    -Name;
+    -Price;
+}
+
+@enduml

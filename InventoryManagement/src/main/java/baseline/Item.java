@@ -10,56 +10,66 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public abstract class Item { //make abstract
+public abstract class Item
+{
 
-    // partID, partName, partInventory, partPrice, partMax, partMin
-    private IntegerProperty partSerialNumber;
-    private StringProperty partName;
-    private DoubleProperty partPrice;
+    // itemSerialNumber, itemName, itemPrice
+    private IntegerProperty itemSerialNumber;
+    private StringProperty itemName;
+    private DoubleProperty itemPrice;
 
 
-    public Item(int partID, String partName, Double partPrice) {
-        this.partSerialNumber = new SimpleIntegerProperty(partID);
-        this.partName = new SimpleStringProperty(partName);
-        this.partPrice = new SimpleDoubleProperty(partPrice);
+    public Item(int itemSerialNumber, String itemName, Double itemPrice) {
+        this.itemSerialNumber = new SimpleIntegerProperty(itemSerialNumber);
+        this.itemName = new SimpleStringProperty(itemName);
+        this.itemPrice = new SimpleDoubleProperty(itemPrice);
+    }
+    //Properties
+    public IntegerProperty itemSerialNumberProperty()
+    {
+        return itemSerialNumber;
     }
 
-    public IntegerProperty partIDProperty() {
-        return partSerialNumber;
-    }
-
-    public StringProperty partNameProperty() {
-        return partName;
+    public StringProperty itemNameProperty()
+    {
+        return itemName;
     }
 
 
-    public DoubleProperty partPriceProperty() {
-        return partPrice;
+    public DoubleProperty itemPriceProperty()
+    {
+        return itemPrice;
     }
 
 
-    //------------------------------------------------------------------------------
-    public void setPartID(int partID) {
-        this.partSerialNumber = new SimpleIntegerProperty(partID);
+    //Grab Serial Number
+    public void setItemSerialNumber(int itemSerialNumber)
+    {
+        this.itemSerialNumber = new SimpleIntegerProperty(itemSerialNumber);
     }
 
-    public int getPartID() {
-        return partSerialNumber.get();
+    public int getItemSerialNumber()
+    {
+        return itemSerialNumber.get();
+    }
+    //Grab Name
+    public void setItemName(String ItemName)
+    {
+        this.itemName.set(ItemName);
     }
 
-    public void setPartName(String PartName) {
-        this.partName.set(PartName);
+    public String getItemName()
+    {
+        return itemName.get();
+    }
+    //Grab price.
+    public void setPartPrice(Double ItemPrice)
+    {
+        this.itemPrice.set(ItemPrice);
     }
 
-    public String getPartName() {
-        return partName.get();
-    }
-
-    public void setPartPrice(Double PartPrice) {
-        this.partPrice.set(PartPrice);
-    }
-
-    public Double getPartPrice() {
-        return partPrice.get();
+    public Double getItemPrice()
+    {
+        return itemPrice.get();
     }
 }

@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wgu.view.AddProductController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.Inventory">
     <children>
-        <Button fx:id="saveItemsML" layoutX="782.0" layoutY="526.0" mnemonicParsing="false" onAction="#saveProductsMP" prefHeight="30.0" prefWidth="75.0" text="Save">
+        <Button fx:id="saveItemsML" layoutX="782.0" layoutY="526.0" mnemonicParsing="false" onAction="#saveItemsMP" prefHeight="30.0" prefWidth="75.0" text="Save">
             <font>
                 <Font size="14.0" />
             </font>
@@ -45,26 +45,26 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Button fx:id="deleteItems" layoutX="874.0" layoutY="526.0" mnemonicParsing="false" onAction="#deleteParts" prefHeight="30.0" prefWidth="75.0" text="Delete">
+        <Button fx:id="deleteItems" layoutX="874.0" layoutY="526.0" mnemonicParsing="false" onAction="#deleteItems" prefHeight="30.0" prefWidth="75.0" text="Delete">
             <font>
                 <Font size="14.0" />
             </font>
         </Button>
-        <Button fx:id="addItems" layoutX="970.0" layoutY="463.0" mnemonicParsing="false" onAction="#addProducts" prefHeight="30.0" prefWidth="75.0" text="Add">
+        <Button fx:id="addItems" layoutX="970.0" layoutY="463.0" mnemonicParsing="false" onAction="#addItems" prefHeight="30.0" prefWidth="75.0" text="Add">
             <font>
                 <Font size="14.0" />
             </font>
         </Button>
-        <Button fx:id="searchItems" layoutX="748.0" layoutY="45.0" mnemonicParsing="false" onAction="#searchParts" prefHeight="30.0" prefWidth="117.0" text="Search Item">
+        <Button fx:id="searchItems" layoutX="748.0" layoutY="45.0" mnemonicParsing="false" onAction="#searchItems" prefHeight="30.0" prefWidth="117.0" text="Search Item">
             <font>
                 <Font size="14.0" />
             </font>
         </Button>
         <TableView fx:id="itemsTableView" layoutX="351.0" layoutY="100.0" prefHeight="347.0" prefWidth="682.0">
             <columns>
-                <TableColumn fx:id="partSerialNumberColumn" prefWidth="167.0" text="Serial Number" />
-                <TableColumn fx:id="partNameColumn" prefWidth="169.0" text="Item Name" />
-                <TableColumn fx:id="partPriceColumn" prefWidth="163.0" text="Price" />
+                <TableColumn fx:id="itemSerialNumberColumn" prefWidth="167.0" text="Serial Number" />
+                <TableColumn fx:id="itemNameColumn" prefWidth="169.0" text="Item Name" />
+                <TableColumn fx:id="itemPriceColumn" prefWidth="163.0" text="Price" />
             </columns>
         </TableView>
         <Label layoutX="351.0" layoutY="22.0" prefHeight="46.0" prefWidth="173.0" text="Modify List">
@@ -72,7 +72,7 @@
                 <Font size="30.0" />
             </font>
         </Label>
-        <Button fx:id="cancelItems" layoutX="970.0" layoutY="526.0" mnemonicParsing="false" onAction="#cancelProducts" prefHeight="30.0" prefWidth="75.0" text="Cancel">
+        <Button fx:id="cancelItems" layoutX="970.0" layoutY="526.0" mnemonicParsing="false" onAction="#cancelItems" prefHeight="30.0" prefWidth="75.0" text="Cancel">
             <font>
                 <Font size="14.0" />
             </font>

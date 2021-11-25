@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddManagerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.AddItemController">
     <children>
-        <Button fx:id="saveManagerAP" layoutX="739.0" layoutY="501.0" mnemonicParsing="false" onAction="#saveProductsAP" prefHeight="30.0" prefWidth="75.0" text="Save">
+        <Button fx:id="saveManagerAP" layoutX="739.0" layoutY="501.0" mnemonicParsing="false" onAction="#saveManagerAP" prefHeight="30.0" prefWidth="75.0" text="Save">
             <font>
                 <Font size="14.0" />
             </font>
